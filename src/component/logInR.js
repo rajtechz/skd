@@ -301,13 +301,13 @@ export default function LogInR({ setToken }) {
                     }
 
                 })}>
-                    <Box sx={() => ({ width: "100vw", height: '20vh', })}></Box>
+                    <Box sx={() => ({ width: "100vw", height: '15vh', })}></Box>
                     <Box mt="lg" mx="auto" component="form"
                         onSubmit={handleSubmit}
                         sx={(theme) => ({ width: "90%", height: "100%", })}>
                         <Grid>
                             <Grid.Col>
-                                <Center mb="lg">
+                                <Center >
                                     <Box >
                                         <Center>
                                             <Text sx={(theme) => ({
@@ -322,7 +322,7 @@ export default function LogInR({ setToken }) {
                                                 </Text>
                                             </Box>
                                         </Center>
-                                        <Center mt="xs"
+                                        <Center 
                                             sx={(theme) => ({ color: "#f2ff1c", fontSize: "20px" })} >
                                             <Text>Log In With Password </Text>
                                         </Center>
@@ -335,7 +335,7 @@ export default function LogInR({ setToken }) {
                                     color='black'
                                     placeholder="Mobile"
                                     pattern="[0-9]{10}"
-                                    size="lg"
+                                    size="md"
                                     styles={{
                                         error: {
                                             color: 'pink',
@@ -343,12 +343,12 @@ export default function LogInR({ setToken }) {
                                     }} />
                                 {mobileError && <Text style={{ color: "red" }}>{mobileError}</Text>}
                             </Grid.Col>
-                            <Grid.Col pt="xl">
+                            <Grid.Col >
                                 <TextInput
                                     name='password'
                                     value={password}
                                     onChange={handlePasswordChange}
-                                    size="lg" placeholder="Password"
+                                    size="md" placeholder="Password"
                                     type={showPassword ? 'text' : 'password'}
                                     styles={{
                                         error: {
@@ -363,7 +363,7 @@ export default function LogInR({ setToken }) {
                                 {passwordError && <Text style={{ color: "red" }}>{passwordError}</Text>}
                             </Grid.Col>
                         </Grid>
-                        <Center mt="xl">
+                        <Center >
                             <Box>
                                 <Anchor onClick={forgetPassword} sx={(theme) => ({
                                     color: "#f2ff1c",
@@ -373,7 +373,7 @@ export default function LogInR({ setToken }) {
                                 </Anchor>
                             </Box>
                         </Center>
-                        <Center mt="xl" mb={10}>
+                        <Center mt="md" mb={10}>
                             <Box>
                                 <Button radius="md" size='lg' type='submit' color="pink" px={50}>Submit</Button>
                             </Box>
